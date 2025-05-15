@@ -64,17 +64,63 @@
 //     }
 // }    
 
-int x = 10;
-if (x == 10)
+// int x = 10;
+// if (x == 10)
+// {
+//     Console.WriteLine("x is 10");
+// }
+
+// for(int i = 0; i < x; i++)
+
+
+// {
+//     Console.WriteLine($"Bob is Cool: {i}");
+// }
+// // testing
+// // testing pt 2
+
+using System;
+using System.Diagnostics.Tracing;
+using System.Net.NetworkInformation;
+
+class Circle
 {
-    Console.WriteLine("x is 10");
+    private double _radius;
+
+    public void SetRadius(double radius)
+    {
+        if(radius < 0)
+        {
+            Console.WriteLine("Error");
+            return;
+        }
+        _radius = radius;
+    }
+        public double GetRadius()
+    {
+        return _radius;
+
+    }
+    public double GetArea()
+    {
+        return Math.PI * _radius * _radius;
+    }
 }
 
-for(int i = 0; i < x; i++)
-
-
+class Program
 {
-    Console.WriteLine($"Bob is Cool: {i}");
+    static void Main(string[] args)
+
+    {
+        Circle myCircle = new Circle();
+        myCircle.SetRadius(10);
+        Circle myCircle2 = new Circle();
+        myCircle.SetRadius(20);
+
+        Console.WriteLine($"{myCircle.GetRadius()}");
+        Console.WriteLine($"{myCircle2.GetRadius()}");
+
+        Console.WriteLine($"{myCircle.GetArea()}");
+        
+    }
 }
-// testing
-// testing pt 2

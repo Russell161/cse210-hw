@@ -24,7 +24,7 @@ class Cylinder
     public Cylinder(double height, double radius)
     {
         _height = height;
-        _circle = 
+        _circle = circle;
     }
 
     public void SetCircle(Circle circle)
